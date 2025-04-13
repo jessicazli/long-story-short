@@ -19,7 +19,7 @@ export async function fetchData(title: string) {
   let openLibrary = "";
   let googleBooks = "";
 
-  // === Wikipedia (Full Article) ===
+  // Wikipedia (Full Article)
   try {
     const res = await fetch(
       `https://en.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext&format=json&origin=*&titles=${encoded}`
@@ -32,7 +32,7 @@ export async function fetchData(title: string) {
     wikipedia = "Failed to load Wikipedia article.";
   }
 
-  // === Open Library ===
+  // Open Library
   try {
     const olRes = await fetch(
       `https://openlibrary.org/search.json?title=${encoded}`
@@ -55,7 +55,7 @@ export async function fetchData(title: string) {
     openLibrary = "Failed to load Open Library data.";
   }
 
-  // === Google Books ===
+  // Google Books
   try {
     const gbRes = await fetch(
       `https://www.googleapis.com/books/v1/volumes?q=intitle:${encoded}`
