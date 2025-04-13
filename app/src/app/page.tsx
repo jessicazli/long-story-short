@@ -51,7 +51,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 items-start">
           <div className="flex flex-col gap-6 md:text-left items-center md:items-start">
             <p className="text-lg text-muted-foreground max-w-md">
-              Whether you\'re catching up on a classic or previewing something
+              Whether you are catching up on a classic or previewing something
               new, just type a title and get a podcast-style recap to listen to
               on the go.
             </p>
