@@ -3,6 +3,7 @@ import { NextRequest } from 'next/server';
 
 export const config = {
   maxDuration: 60,
+  memory: 1024,
 };
 
 export async function POST(req: NextRequest) {
