@@ -26,9 +26,9 @@ It combines structured retrieval, language generation, and text-to-speech synthe
    
 ## Dependencies & Data Sources
 
-- [OpenAI API](https://platform.openai.com/) — for GPT-3.5-turbo script generation  
-- [ElevenLabs API](https://www.elevenlabs.io/) — for lifelike text-to-speech  
-- [Open Library](https://openlibrary.org/) — for book metadata and covers  
+- [OpenAI API](https://platform.openai.com/) — for script generation  
+- [ElevenLabs API](https://www.elevenlabs.io/) — for text-to-speech  
+- [Open Library](https://openlibrary.org/) — for book metadata 
 - [Wikipedia API](https://www.mediawiki.org/wiki/API:Main_page) — for article context  
 - [Google Books API](https://developers.google.com/books) — for additional metadata  
 
