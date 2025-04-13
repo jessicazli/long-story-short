@@ -26,7 +26,7 @@ ${googleBooks}
     const script = await generateScript(context, tone);
 
     return NextResponse.json({ script });
-  } catch (error: any) {
+  } catch (error) {
     console.error('API error:', error);
     return NextResponse.json({ error: 'Failed to generate script' }, { status: 500 });
   }

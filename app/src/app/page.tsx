@@ -11,6 +11,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Image from "next/image";
 
 export default function Home() {
   const [title, setTitle] = useState("");
@@ -50,7 +51,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 items-start">
           <div className="flex flex-col gap-6 md:text-left items-center md:items-start">
             <p className="text-lg text-muted-foreground max-w-md">
-              Whether you're catching up on a classic or previewing something
+              Whether you\'re catching up on a classic or previewing something
               new, just type a title and get a podcast-style recap to listen to
               on the go.
             </p>
@@ -79,11 +80,7 @@ export default function Home() {
                     key={book.title}
                     className="flex flex-col gap-4 justify-center items-center"
                   >
-                    <img
-                      src={book.coverUrl}
-                      alt={book.title}
-                      className="w-32"
-                    />
+                    <Image src={book.coverUrl} alt={book.title} width={136} height={96} />
                     <h3 className="font-semibold text-sm text-center">
                       {book.title}
                     </h3>
