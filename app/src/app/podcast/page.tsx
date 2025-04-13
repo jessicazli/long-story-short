@@ -19,7 +19,7 @@ export default function PodcastPage() {
     const fetchScript = async () => {
       setLoadingScript(true);
       try {
-        const res = await fetch('/api/generate', {
+        const res = await fetch('/api/llm', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ title, tone: 'engaging' }),
@@ -65,8 +65,8 @@ export default function PodcastPage() {
   }, [script]);
 
   return (
-    <div className="min-h-screen p-8 sm:p-20 max-w-2xl mx-auto space-y-6">
-      <h1 className="text-3xl font-bold">Podcast Script for: {title}</h1>
+    <div className="min-h-screen p-8 sm:p-20 max-w-2xl mx-auto space-y-6 font-display">
+      <h1 className="text-3xl font-bold text-center">{title}</h1>
 
       {loadingScript ? (
         <p className="animate-pulse text-lg">Generating podcast script...</p>
