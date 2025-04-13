@@ -5,8 +5,9 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { Suspense } from "react";
 
-export default function PodcastPage() {
+function PodcastContent() {
   const searchParams = useSearchParams();
   const title = searchParams.get("title");
 
@@ -175,5 +176,21 @@ export default function PodcastPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function PodcastPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="flex items-center justify-center h-screen">
+          <p className="text-muted-foreground animate-pulse">
+            Loading podcast page...
+          </p>
+        </div>
+      }
+    >
+      <PodcastContent />
+    </Suspense>
   );
 }
