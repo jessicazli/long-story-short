@@ -38,4 +38,5 @@ It combines structured retrieval, language generation, and text-to-speech synthe
 - Framework: Next.js (App Router)
 - Language: TypeScript  
 - Styling: Tailwind CSS 
+- UI Components: shadcn/ui
 - Deployment: Vercel  
