@@ -1,6 +1,10 @@
 import { generateAudioStream } from '@/app/api/generateAudio';
 import { NextRequest } from 'next/server';
 
+export const config = {
+  maxDuration: 60,
+};
+
 export async function POST(req: NextRequest) {
   try {
     const { text } = await req.json();
